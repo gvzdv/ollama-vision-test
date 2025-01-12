@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama Vision Test</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ollama Vision Test</h1>
+        </header>
+        <main>
+            <div class="drop-area" id="drop-area">
+                <p>Drop an image here</p>
+                <img id="preview" src="" alt="Image preview" style="display: none; max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="description-area" id="description-area">
+                <p>Image description will be here</p>
+            </div>
+        </main>
+        <footer>
+            <p>Created by Mike Gvozdev</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.6/marked.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Python cache and environment files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+
+# Logs and database files
+*.log
+*.sqlite3
+
+# IDE settings
+.vscode/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+# Uploads
+uploads/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Uvicorn and FastAPI related
+*.pid
+*.sock
