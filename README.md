@@ -10,9 +10,24 @@ A simple web application for uploading images, generating descriptions using **L
 
 ## Requirements
 - Python 3.12
-- At least 8GB VRAM
+- At least 8GB VRAM (for local installation)
 
-## Setup
+## Run Docker image - CPU only
+### Usage
+
+1. Run the Docker image:
+```
+docker run -d -p 8000:8000 --name ollama-vision-test oneout/ollama-vision-test:latest
+```
+
+2. Open your browser and navigate to:
+http://127.0.0.1:8000
+
+3. Drag and drop an image into the app to see the generated description.
+
+## Local installation
+### Setup
+Download ollama from https://ollama.com/download/
 
 ```bash
 # Clone the repository
@@ -26,11 +41,14 @@ source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
+# Pull the model
+ollama pull llama3.2-vision
+
 # Run the application
-uvicorn main:app --reload
+python -m uvicorn main:app --reload
 ```
 
-## Folder Structure
+### Folder Structure
 
 ```
 ollama-vision-test/
@@ -45,7 +63,7 @@ ollama-vision-test/
 ├── README.md         # Project documentation
 ```
 
-## Usage
+### Usage
 
 1. Start the FastAPI server:
    ```bash
@@ -62,6 +80,7 @@ http://127.0.0.1:8000
 - Chat history and interface not implemented
 - Streaming not implemented
 - Insufficient error logging
+- Docker image is not GPU-optimized (CPU only)
 
 ## License
 This project is licensed under the MIT License.
